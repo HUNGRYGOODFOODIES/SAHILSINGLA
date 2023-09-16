@@ -282,15 +282,18 @@ a.active,
   justify-content: center;
 }
 
-#bl{
+#bl {
   position: relative;
-  left: 200px;
+  left: 100px;
   height: 300px;
   width: 300px;
   border-radius: 50%;
   border: 10px solid black;
   margin-right: 300px;
+  margin-bottom: 20px; /* Add margin for spacing between #bl and .containerrr */
 }
+
+
 #yo{
   position: relative;
   text-decoration: underline;
@@ -299,6 +302,24 @@ a.active,
 #intro{
   position: relative;
   font-size: 15px;
+}
+
+.containerrr{
+  max-width: calc(33.33% - 20px); /* Adjust the percentage as needed */
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .containerrr{
+    max-width: calc(50% - 20px); /* Adjust for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .containerrr{
+    max-width: 100%; /* Full width for the smallest screens */
+  }
 }
 
 /*cards */
